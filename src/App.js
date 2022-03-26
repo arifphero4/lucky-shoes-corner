@@ -2,6 +2,7 @@ import "./App.css";
 import Products from "./components/Products/Products";
 import Cart from "./components/Cart/Cart";
 import { useEffect, useState } from "react";
+import Header from "./components/Header/Header";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -31,14 +32,17 @@ function App() {
   }
 
   return (
-    <div className="row">
-      <div className="col">
-        <Products products={products} addtocart={addtocart}></Products>
+    <>
+      <Header></Header>
+      <div className="row">
+        <div className="col">
+          <Products products={products} addtocart={addtocart}></Products>
+        </div>
+        <div className="col">
+          <Cart procar={procar} random={random}></Cart>
+        </div>
       </div>
-      <div className="col">
-        <Cart procar={procar} random={random}></Cart>
-      </div>
-    </div>
+    </>
   );
 }
 
