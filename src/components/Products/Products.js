@@ -7,7 +7,7 @@ function Products({ products, addtocart }) {
       {products.length === 0 && <div>No Products Found Yet</div>}
       {products.map((product) => (
         <Product
-          key={product._id}
+          key={product.id}
           product={product}
           addtocart={addtocart}
         ></Product>

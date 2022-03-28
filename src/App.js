@@ -3,10 +3,11 @@ import Products from "./components/Products/Products";
 import Cart from "./components/Cart/Cart";
 import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [procar, setprocar] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     fetch("data.json")
@@ -15,20 +16,26 @@ function App() {
   }, []);
 
   function addtocart(product) {
-    const exists = procar.find((x) => x._id === product._id);
-    if (procar.length === 4) {
+    const exists = cart.find((x) => x.id === product.id);
+    if (cart.length === 4) {
       return;
     }
     if (!exists) {
-      setprocar([product, ...procar]);
+      setCart([product, ...cart]);
+    }
+  }
+  const randomNumber = (min, max) =>
+    Math.floor(Math.random() * (max - min)) + min;
+
+  function random() {
+    const cartLen = cart.length;
+    if (cartLen > 0) {
+      setCart([cart[randomNumber(0, cartLen)]]);
     }
   }
 
-  function random() {
-    const cartLen = procar.length;
-    if (cartLen > 0) {
-      setprocar([procar[2]]);
-    }
+  function emptyCart() {
+    setCart([]);
   }
 
   return (
@@ -39,9 +46,10 @@ function App() {
           <Products products={products} addtocart={addtocart}></Products>
         </div>
         <div className="col">
-          <Cart procar={procar} random={random}></Cart>
+          <Cart cart={cart} random={random} emptyCart={emptyCart}></Cart>
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 }

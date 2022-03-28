@@ -1,0 +1,13 @@
+.cart{
+    padding: 2rem 1rem;
+    background-color: #eceff1; 
+}
+.title{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.error{
+    color: red;
+    text-transform: lowercase;
+}

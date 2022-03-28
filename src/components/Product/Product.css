@@ -1,0 +1,23 @@
+.card{
+    flex: 100%;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+.card-img{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 15rem;
+    
+}
+.card-info h3,p{
+    margin-top: 0.6rem;
+}
+.card-info p{
+    font-size: 1.3rem;
+}
+@media (min-width:768px){
+    .card{
+        flex: 30%;
+    }
+}

@@ -17,7 +17,7 @@ function Product({ product, addtocart }) {
         <p>${price}</p>
         <button className="add" onClick={() => addtocart(product)}>
           <span className="me-1">Add to Cart</span>{" "}
-          <box-icon name="cart-add"></box-icon>
+          <box-icon name="cart" color="aliceblue"></box-icon>
         </button>
       </div>
     </div>

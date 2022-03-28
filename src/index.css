@@ -1,0 +1,20 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+button{
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 0.7rem;
+    justify-content: space-between;
+    background-color: rgb(49, 103, 151);
+    color: aliceblue;
+    outline: 0;
+    border: 0;
+    border-radius: 1rem;
+    margin-top: 0.8rem;
+}
+.me-1{
+    margin-right: 0.4rem;
+}
