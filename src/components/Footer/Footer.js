@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="question2">
         <h2>2. how useState works?</h2>
         <p>
-          <strong>Answer:</strong> What we write in JSX as HTML is not actual
+          <strong>Answer: </strong> What we write in JSX as HTML is not actual
           HTML. JSX converts it into JavaScript using Babel, and finally, React
           converts that to pure HTML for rendering in Browser. Babel is a
           JavaScript compiler that includes the ability to compile JSX into
